@@ -3,8 +3,9 @@ import Resource from 'koa-resource-router'
 import koaBody from 'koa-better-body'
 import knex from 'koa-knex'
 import path from 'path'
+import 'babel-polyfill'
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 
 // Export the app for use in the tests
 const app = module.exports = koa()

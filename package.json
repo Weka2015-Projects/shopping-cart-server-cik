@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel index.js | node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,17 +31,24 @@
     "mocha": "^2.3.4",
     "mocha-generators": "^1.2.0",
     "supertest": "^1.1.0"
-},
+  },
   "dependencies": {
-    "babel": "^6.3.26",
-    "babel-cli": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
+    "babel": "^6.5.0",
+    "babel-cli": "^6.5.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.4.3",
+    "bookshelf": "^0.9.1",
     "bookshelf-schema": "^0.1.1",
     "escape-string-regexp": "^1.0.4",
     "highlight.js": "^9.1.0",
     "immutable": "^3.7.6",
+    "knex": "^0.9.0",
+    "koa": "^1.1.2",
+    "koa-better-body": "^1.0.17",
+    "koa-knex": "^0.7.5",
+    "koa-resource-router": "^0.4.0",
     "moment": "^2.11.1",
     "pg": "^4.4.3",
     "pygmentize-bundled": "^2.3.0",
