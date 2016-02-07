@@ -49,11 +49,7 @@ const dbName = `product_list`
 
 app.use(knex({
   client: 'pg',
-  connection: {
-    host     : '127.0.0.1',
-    port     : '5432',
-    database : dbName
-  },
+  connection: process.env.DATABASE_URL,
   searchPath: 'public'
 }))
 
