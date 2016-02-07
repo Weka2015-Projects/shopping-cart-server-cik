@@ -1,10 +1,13 @@
+'use strict'
+
+import "babel-polyfill"
 import koa from 'koa'
 import Resource from 'koa-resource-router'
 import koaBody from 'koa-better-body'
 import knex from 'koa-knex'
 import path from 'path'
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 console.log('listening')
 // Export the app for use in the tests
 const app = koa()
