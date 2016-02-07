@@ -19,9 +19,9 @@ module.exports =  {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'product_list_staging',
-      user:     'username',
-      password: 'password',
+      database: 'product_list',
+      user:     'apprentice',
+      password: '',
     },
     pool: {
       min: 2,
@@ -35,9 +35,9 @@ module.exports =  {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'product_list_production',
-      user:     'username',
-      password: 'password',
+      database: 'product_list',
+      user:     'apprentice',
+      password: '',
     },
     pool: {
       min: 2,

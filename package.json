@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -17,21 +18,17 @@
   },
   "homepage": "https://github.com/Weka2015-Projects/shopping-cart-server-cik#readme",
   "devDependencies": {
-    "babel-polyfill": "^6.3.14",
-    "bookshelf": "^0.9.1",
     "chai": "^3.4.1",
     "co-supertest": "0.0.10",
     "jsdomify": "^1.1.0",
-    "knex": "^0.9.0",
-    "koa": "^1.1.2",
-    "koa-better-body": "^1.0.17",
-    "koa-knex": "^0.7.5",
-    "koa-resource-router": "^0.4.0",
     "mocha": "^2.3.4",
     "mocha-generators": "^1.2.0",
     "supertest": "^1.1.0"
-},
+  },
   "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "bookshelf": "^0.9.1",
+    "knex": "^0.9.0",
     "babel": "^6.3.26",
     "babel-cli": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
@@ -45,6 +42,10 @@
     "pg": "^4.4.3",
     "pygmentize-bundled": "^2.3.0",
     "ramda": "^0.19.1",
-    "thunkify": "^2.1.2"
+    "thunkify": "^2.1.2",
+    "koa": "^1.1.2",
+    "koa-better-body": "^1.0.17",
+    "koa-knex": "^0.7.5",
+    "koa-resource-router": "^0.4.0"
   }
 }

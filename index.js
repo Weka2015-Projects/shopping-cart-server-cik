@@ -5,9 +5,9 @@ import knex from 'koa-knex'
 import path from 'path'
 
 const PORT = 4000
-
+console.log('listening')
 // Export the app for use in the tests
-const app = module.exports = koa()
+const app = koa()
 
 // Add the body parser to parse both multipart forms and JSON (for later use)
 app.use(koaBody({
@@ -64,8 +64,8 @@ const users = new Resource('users', {
   create: function *(next) {
     try {
       const res = yield this.knex('users').returning('*').insert({
-        name: this.request.body.fields.name,
-        email: this.request.body.fields.email,
+        product_name: this.request.body.fields.product_name,
+        price: this.request.body.fields.price,
         created_at: new Date(),
         updated_at: new Date()
       })
@@ -97,10 +97,10 @@ const users = new Resource('users', {
   // PUT /users/:id
   update: function *(next) {
     let id = this.params.user
-    let name = this.request.body.fields.name
-    let email = this.request.body.fields.email
-    console.log(name ,email)
-    yield this.knex.raw('UPDATE users SET name = ?, email = ? WHERE id = ?', [name, email, id])
+    let product_name = this.request.body.product_name
+    let price = this.request.body.price
+    console.log(product_name, price)
+    yield this.knex.raw('UPDATE users SET product_name = ?, price = ? WHERE id = ?', [product_name, price, id])
     this.body = { message: `Update user #${id}` }
   },
 
