@@ -50,7 +50,7 @@ const dbName = `product_list`
 app.use(knex({
   client: 'pg',
   connection: process.env.DATABASE_URL,
-  searchPath: 'public'
+  searchPath: 'knex, public'
 }))
 
 const users = new Resource('users', {
