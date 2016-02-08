@@ -4,7 +4,7 @@ import "babel-polyfill"
 import koa from 'koa'
 import Resource from 'koa-resource-router'
 import koaBody from 'koa-better-body'
-import knex from 'knex'
+import knex from 'koa-knex'
 import path from 'path'
 
 const PORT = process.env.PORT || 4000
